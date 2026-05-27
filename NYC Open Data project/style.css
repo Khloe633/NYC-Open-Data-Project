@@ -4,7 +4,7 @@ html,body{
 }
 .container{
   display:flex;
-  padding:10px;
+  padding: 5px;
 }
 .center{
   justify-content:center;
@@ -12,11 +12,11 @@ html,body{
 }
 
 nav{
-  background-color:cornflowerblue;
+  background-color:rgb(84, 90, 27);
+  max-height: 70px;
 }
 nav a{
   color:black;
-  padding:10px;
   flex:1;
   text-decoration:none;
   text-align:center;
@@ -24,15 +24,26 @@ nav a{
 nav a:hover{
   color:white;
 }
+
+nav img{
+  padding:10px;
+  flex:1;
+  height:55px;
+}
+
+nav img:hover{
+  transform: scale(1.5);
+  transition:0.2s;
+}
 .subbanner{
   background-color:cornflowerblue;
 }
 #banner{
-  background-color:blue;
+  background-color:rgb(154, 63, 14);
   color:white;
 }
 #footer{
-  background-color:cornflowerblue;
+  background-color:rgb(84, 90, 27);
   color:white;
   /*position:fixed;*/
   left: 0;
