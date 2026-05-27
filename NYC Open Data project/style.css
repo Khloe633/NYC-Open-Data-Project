@@ -46,7 +46,6 @@ nav a:hover{
   padding:10px;
   border:1px solid gray;
   text-align:center;
-  box-shadow:2px 2px 2px black;
   border-radius:2px;
 }
 
@@ -76,7 +75,7 @@ nav a:hover{
   min-width:200px;
 }
 .card img{
-  height:100px;
+  height:300px;
 }
 #output{
   display:flex;
