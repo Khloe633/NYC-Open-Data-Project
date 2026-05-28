@@ -1,27 +1,18 @@
-let data, info;
+let data, info, leftPanel, mapObj;
 
 async function init(){   
   let link = "https://data.cityofnewyork.us/resource/8vwk-6iz2.json";
   info = await fetch(link);
   data = await info.json();
   
-  let output = document.getElementById("output");
+   let leftPanel = get("leftPanel");
   let build = "";
 
-  for(let i = 0; i < data.length; i+=1){
+ for(let i = 0; i< data.length; i+=1){
     let farm = data[i];
-    build += `<div class="fitted card">
-                 <h3>Name: 
-                 <br>${farm.marketname}</h3>
-                 <hr>
-              <p>Location: ${farm.streetaddress}, ${farm.borough}</p>
-              <p>District: ${farm.community_district}</p>
-              <p>Operating hours:${farm.daysoperation}, ${farm.hoursoperations}</p>
-              <p>Open year round?:${farm.open_year_round}</p>
-              <p>Accepts EBT?: ${farm.accepts_ebt}</p>
-              </div>`    
+    build+= card(farm);
   }
-  output.innerHTML = build;
+  leftPanel.innerHTML = build;
 }
 
 function filterbyyear(){
@@ -54,7 +45,7 @@ function filterbyboroandebt(){
   output.innerHTML=build;
 }
 
-
+//FIlter by Operating hours and days (use select)
 function filterbyoperatingdayandhour(){
   let day= get("day").value;
   let hours= get("hours").value;
@@ -69,3 +60,30 @@ function filterbyoperatingdayandhour(){
   }
   output.innerHTML=build;
 }
+
+//Analysis.html of  function 
+
+//Function that accepts the data, an id to the div to display the chart, and the type of chart
+function displayChart( data, chart_id, chart_type ){
+  c3.generate({
+    bindto: `#${chart_id}`, 
+    data: {
+      columns: data, 
+      type: chart_type 
+    }
+  });
+}
+
+
+function budgetChart(){
+  displayChart(budget, "chart", "pie");
+}
+
+
+function chart(type){
+  data = [];
+  displayChart(data, "chart",type);
+}
+
+  
+

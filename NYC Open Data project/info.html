@@ -3,19 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>TEST</title>
-    <!-- Import libraries and link files  -->
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>7.2 Prac Collisions(map)</title>
+<!-- Challenge 1: Import the CSS file and JS file required from LeafletJS.com. -->
+    <!-- LeafletJS CSS file -->
+    
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- LeafletJS JS file (must place after Leaflet's CSS file) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="helper.js"></script>
     <script src="script.js"></script>
    </head>
-  
-  <body onload="init()" style="background-color:rgb(230, 227, 186);">
+   
+  <body style="background-image: url(https://i.ibb.co/tLKF1D0/yello017.jpg)" onload="init()">
+   
+          <!--banner-->
+        <div class="container center" id="banner">
+        <img src="images/banner.png" id="bannerimg">
+        </div>
+          <!--links-->
+    <nav id ="links" class ="container">
+      <a href="index.html"><img src="images/home.png"></a>
+      <a href="info.html"><img src="images/info.png"></a>
+      <a href="analysis.html"><img src="images/analysis.png"></a>
+    </nav>
 
-    <div class="container">
-  <div class="card" id="rightPanel">
-        <h1>Test code</h1>
-        <div id="output" class="container"></div>
-      </div>
-      </div>
-</body>
+    <div>
+        
+        <input type="text" placeholder="Enter Year of opening" id="year">
+        <input type="button" value="Search" onclick="filterbyboro()">
+    </div>
+
+    <div id="output" class="container">
+      <div id="leftPanel"></div>
+      <!-- div for LeafletJS map -->
+      <div id="map"></div>
+    </div>
+    
+    <div id="footer" class="container center">
+      <h3>I cup</h3>
+    </div>  
+  </body>
 </html>

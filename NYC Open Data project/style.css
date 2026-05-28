@@ -1,6 +1,6 @@
 html,body{
   margin:0 auto;
-  font-family:Arial;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .container{
   display:flex;
@@ -18,8 +18,8 @@ html,body{
 }
 
 .container #bannerimg{
-  height:60%;
-  width:60%;
+  height:70%;
+  width:65%;
 }
 nav{
   background-color:rgb(84, 90, 27);
@@ -30,6 +30,7 @@ nav a{
   flex:1;
   text-decoration:none;
   text-align:center;
+
 }
 nav a:hover{
   color:white;
@@ -42,14 +43,14 @@ nav img{
 }
 
 nav img:hover{
-  transform: scale(1.5);
+  transform: scale(1.3);
   transition:0.2s;
 }
 .subbanner{
   background-color:cornflowerblue;
 }
 #banner{
-  background-color:rgb(154, 63, 14);
+  background-color:rgb(70, 16, 7);
   color:white;
 }
 #footer{
@@ -65,9 +66,10 @@ nav img:hover{
   flex:1;
   margin:10px;
   padding:10px;
-  border:1px solid gray;
+  border:2px solid gray;
   text-align:center;
   border-radius:2px;
+  background-color: rgba(128, 134, 45, 0.3);
 }
 
 .highlight{
