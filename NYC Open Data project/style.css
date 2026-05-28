@@ -61,7 +61,11 @@ nav img:hover{
   right: 0;
   bottom:0px;
 }
- 
+ #rightPanel{
+   flex:1;
+   max-height:550px;;
+   overflow-y:scroll;
+ }
 .card{
   flex:1;
   margin:10px;

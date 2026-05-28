@@ -5,14 +5,14 @@ async function init(){
   info = await fetch(link);
   data = await info.json();
   
-   let leftPanel = get("leftPanel");
+   let output = get("output");
   let build = "";
 
  for(let i = 0; i< data.length; i+=1){
     let farm = data[i];
     build+= card(farm);
   }
-  leftPanel.innerHTML = build;
+  output.innerHTML = build;
 }
 
 function filterbyyear(){
@@ -26,7 +26,15 @@ function filterbyyear(){
       build+= card(farm);
     }
   }
+
   output.innerHTML=build;
+
+//dropdown filters
+  let days = fillDropDown("daysoperation");
+  document.getElementById("days").innerHTML = days;
+
+  let hours = fillDropDown("vehicle_type_code1");
+  document.getElementById("vehicle").innerHTML = vehicles;  
 }
 
 
@@ -47,7 +55,7 @@ function filterbyboroandebt(){
 
 //FIlter by Operating hours and days (use select)
 function filterbyoperatingdayandhour(){
-  let day= get("day").value;
+  let day= get("days").value;
   let hours= get("hours").value;
   let build ="";
 
