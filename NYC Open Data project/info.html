@@ -49,9 +49,9 @@
           <a class="button" onclick="filterByvehicle()"> Search </a>
         </div>
  <div class="card">
-          <h3>SEARCH By Factor and Casualties </h3>
-          <input type="text" id="casualties" placeholder="Enter # of Casualties">
-          <select id="factor">
+          <h3>SEARCH By Borough and EBT acceptance </h3>
+          <select id="boro"></select>
+          <select id="ebt"></select>
           </select>
           <hr></hr>
           <a class="button" onclick="FactorCasualty()"> Search </a>
@@ -59,7 +59,7 @@
 
       </div>
 
-      <div class="card" id="rightPanel">
+      <div class="card center" id="rightPanel">
         <h1>NYC Farmer Markets</h1>
         <hr>
         <div id="output" class="container"></div>

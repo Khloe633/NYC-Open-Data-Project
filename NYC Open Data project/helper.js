@@ -4,7 +4,7 @@ function get(id){
 
 
 function card( info ){
-  let build = `<div class="card fitted">
+  let build = `<div class="card fitted center">
     <h2>Market Name: ${info.marketname}</h2>
               <hr>
               <p>Location: ${info.streetaddress}, ${info.borough}</p>

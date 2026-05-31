@@ -30,7 +30,6 @@ nav a{
   flex:1;
   text-decoration:none;
   text-align:center;
-
 }
 nav a:hover{
   color:white;
@@ -56,7 +55,6 @@ nav img:hover{
 #footer{
   background-color:rgb(84, 90, 27);
   color:white;
-  /*position:fixed;*/
   left: 0;
   right: 0;
   bottom:0px;
@@ -67,13 +65,24 @@ nav img:hover{
    overflow-y:scroll;
  }
 .card{
-  flex:1;
+  flex:1 ;
   margin:10px;
   padding:10px;
   border:2px solid gray;
   text-align:center;
   border-radius:2px;
   background-color: rgba(128, 134, 45, 0.3);
+}
+
+.show{
+  flex:1 ;
+  margin:10px;
+  padding:10px;
+  border:2px solid gray;
+  text-align:center;
+  border-radius:2px;
+  background-color: rgba(128, 134, 45, 0.3);
+  height: 305px;
 }
 
 .highlight{
@@ -108,4 +117,8 @@ nav img:hover{
 #output{
   display:flex;
   flex-wrap:wrap;
+}
+
+#panel{
+  flex:1;
 }

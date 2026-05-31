@@ -9,7 +9,7 @@
     <script src="script.js"></script>
    </head>
   
-  <body style="background-image: url(https://i.ibb.co/tLKF1D0/yello017.jpg)">
+  <body style="background-image: url(https://i.ibb.co/tLKF1D0/yello017.jpg)" onload="onot()">
    
           <!--banner-->
         <div class="container center" id="banner">
@@ -27,32 +27,34 @@
     <h1>Data Analytics</h1>
 </div>
 
+  <div class="center container">
+    <div class="card">NYC open data is a free, public use website with public data from many sources and services in New York City. The data provided comes directly from the city government and is available to any and all users online who want to view a certain piece of information. You can view their website <a href="https://opendata.cityofnewyork.us/">here</a>.</div>
+  </div>
+
 <div class="container center">
+  <div id="panel">
 
    <div class="card">
-    <h3>Budget</h3>
-    <p><span class="highlight">Scenario:</span> </p>
-    <a class="button" onclick="chart('line')"> Line</a>
+    <h2>Budget(1)</h2>
+    <p><span class="highlight">Scenario:</span>Create a chart that analyzes average grades of Math, English, Science and Social Studies courses by period.</p>
+    <a class="button" id = "Line" onclick="ByAgency()"> Line</a>
+    <a class="button" id = "Bar" onclick="ByAgency()"> Bar </a>
    </div>
 
    <div class="card">
-    <h3>Budget</h3>
-    <p><span class="highlight">Scenario:</span> </p>
-    <a class="button" onclick="chart('bar')"> Bar </a>
+    <h2>Budget(2)</h2>
+    <p><span class="highlight">Scenario:</span>Create a chart that analyzes average grades of Math, English, Science and Social Studies courses by period. </p>
+    <a class="button" id = "Chart" onclick="ByAgency()"> Pie chart</a>
    </div>
 
-   <div class="card">
-    <h3>Budget</h3>
-    <p><span class="highlight">Scenario:</span> </p>
-    <a class="button" onclick="budgetChart()"> Pie chart</a>
-   </div>
 </div>
 
 <!-- div for chart -->
-<div class="card">
-       <div id="chart"></div>  <!-- div for chart -->
-</div>
+  <div class="show">
+    <div id="chart"></div> 
+   </div>
 
+</div>
 
 <!--Footer-->
  <div id="footer" class="container center">
@@ -61,5 +63,5 @@
       </p>
     </div>  
     
-</body>
+ </body>
 </html>
