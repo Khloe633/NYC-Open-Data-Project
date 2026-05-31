@@ -2,7 +2,7 @@ function get(id){
   return document.getElementById(id);
 }
 
-
+//card
 function card( info ){
   let build = `<div class="card fitted center">
     <h2>Market Name: ${info.marketname}</h2>
@@ -18,4 +18,20 @@ function card( info ){
                   }
      build +=    `</div>`;
 return build;
+}
+//showmap
+function showMap(lat,lon){
+  let location = [lat, lon];
+  //Line below needed to create the map object once.
+  if(!mapObj){
+      mapObj = L.map("map");
+  } 
+  let map = mapObj.setView(location, 18);// [lat, lon], zoom
+
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+  }).addTo(map);
+
+  let marker = L.marker(location).addTo(map);// places marker on map
 }

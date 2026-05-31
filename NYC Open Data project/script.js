@@ -30,17 +30,17 @@ function filterbyyear(){
  output.innerHTML=build;
 
 //dropdown filters
-  let day = fillDropDown("daysoperation");
-  document.get("days").innerHTML = days;
+  let dayoperation = fillDropDown("daysoperation");
+  document.get("dayoperation").innerHTML = dayoperation;
 
   let hours = fillDropDown("hoursoperations");
-  document.get("hour").innerHTML = hours;
+  document.get("hours").innerHTML = hours;
   
   let boro = fillDropDown("borough");
-  document.get("boro").innerHTML = boros;
+  document.get("boro").innerHTML = boro;
 
   let ebt = fillDropDown("accepts_ebt");
-  document.get("ebt").innerHTML = ebts;  
+  document.get("ebt").innerHTML = ebt;  
 }
 
 
@@ -61,23 +61,31 @@ function filterbyboroandebt(){
 
 //FIlter by Operating hours and days (use select)
 function filterbyoperatingdayandhour(){
-  let days= get("days").value;
-  let hours= get("hours").value;
+  let daysoperation= get("dayoperation").value;
+  let hour= get("hours").value;
   let build ="";
 
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
-    if(farm.hoursoperations == hours && farm.daysoperation == days){
+    if(farm.hoursoperations == hour && farm.daysoperation == dayoperation){
       build+= card(farm);
     }
   }
   output.innerHTML=build;
 }
 
-//Analysis.html of  function 
+//showmap
+function displayMap(){
+  //Retrieve the latitude & longitude from the user via text inputs and pass it to the showMap() function to generate the map and display it.
+  let lat = get("lat").value;
+  let lon = get("lon").value;
 
-//global variables：
+  showMap(lat,lon);
+  
+}
+
+//Analysis.html of  function 
 
 //Data source：
 async function onto(){
@@ -93,9 +101,6 @@ let nypd = 0, dot = 0, hpd = 0, other = 0;
 
 for(let i = 0; i < data.length; i++){
   let farm = data[i];
-
-
-
 
 
 }
