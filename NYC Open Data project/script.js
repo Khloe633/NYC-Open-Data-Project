@@ -1,12 +1,13 @@
 let data, info, leftPanel, mapObj;
 
 async function init(){   
-  let link = "https://data.cityofnewyork.us/resource/8vwk-6iz2.json";
+  let link = "farm.json";
   info = await fetch(link);
   data = await info.json();
 
   let output = get("output");
   let build = "";
+
 
  for(let i = 0; i< data.length; i+=1){
     let farm = data[i];
@@ -30,17 +31,17 @@ function filterbyyear(){
  output.innerHTML=build;
 
 //dropdown filters
-  let dayoperation = fillDropDown("daysoperation");
-  document.get("dayoperation").innerHTML = dayoperation;
+   let days = fillDropDown("daysoperation");
+  document.getElementById("days").innerHTML = days;
 
   let hours = fillDropDown("hoursoperations");
-  document.get("hours").innerHTML = hours;
+  document.getElementById("hours").innerHTML = hours;
   
   let boro = fillDropDown("borough");
-  document.get("boro").innerHTML = boro;
+  document.getElementById("boro").innerHTML = boro;
 
   let ebt = fillDropDown("accepts_ebt");
-  document.get("ebt").innerHTML = ebt;  
+  document.getElementById("ebt").innerHTML = ebt;  
 }
 
 
@@ -61,14 +62,14 @@ function filterbyboroandebt(){
 
 //FIlter by Operating hours and days (use select)
 function filterbyoperatingdayandhour(){
-  let daysoperation= get("dayoperation").value;
+  let day= get("days").value;
   let hour= get("hours").value;
   let build ="";
 
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
-    if(farm.hoursoperations == hour && farm.daysoperation == dayoperation){
+    if(farm.hoursoperations == hour && farm.daysoperation == day){
       build+= card(farm);
     }
   }
