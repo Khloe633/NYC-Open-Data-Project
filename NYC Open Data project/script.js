@@ -1,6 +1,6 @@
 let data, info, leftPanel, mapObj;
 
-async function init(){   
+async function init(){
   let link = "farm.json";
   info = await fetch(link);
   data = await info.json();
@@ -14,21 +14,7 @@ async function init(){
     build+= card(farm);
   }
   output.innerHTML = build;
-}
 
-function filterbyyear(){
-  let year= get("year").value;
-  let build ="";
-
-
-   for(let i=0; i<data.length; i++){
-    let farm=data[i];
-    if(farm.year == year){
-      build+= card(farm);
-    }
-  }
-
- output.innerHTML=build;
 
 //dropdown filters
    let days = fillDropDown("daysoperation");
@@ -44,12 +30,24 @@ function filterbyyear(){
   document.getElementById("ebt").innerHTML = ebt;  
 }
 
+//filter by year
+function filterbyyear(){
+  let year= get("year").value;
+  let build ="";
+
+   for(let i=0; i<data.length; i++){
+    let farm=data[i];
+    if(farm.year == year){
+      build+= card(farm);
+    }
+  }
+  output.innerHTML=build;
+}
 
 function filterbyboroandebt(){
   let boros= get("boro").value;
   let ebts= get("ebt").value;
   let build ="";
-
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
@@ -59,13 +57,13 @@ function filterbyboroandebt(){
   }
   output.innerHTML=build;
 }
+  
 
 //FIlter by Operating hours and days (use select)
 function filterbyoperatingdayandhour(){
   let day= get("days").value;
   let hour= get("hours").value;
   let build ="";
-
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
@@ -81,39 +79,49 @@ function displayMap(){
   //Retrieve the latitude & longitude from the user via text inputs and pass it to the showMap() function to generate the map and display it.
   let lat = get("lat").value;
   let lon = get("lon").value;
-
   showMap(lat,lon);
-  
 }
+
 
 //Analysis.html of  function 
 
-//Data source：
-async function onto(){
-  let link = "https://data.cityofnewyork.us/resource/8vwk-6iz2.json";
+async function init(){
+  let link = "farm.json";
   info = await fetch(link);
   data = await info.json();
   console.log(data);
 }
 
-function ByAgency(){
+function accidentsByBorough(){
 //Create and initialize variables:
-let nypd = 0, dot = 0, hpd = 0, other = 0;
+let q = 0, bk = 0, bx = 0, m = 0, s = 0;
 
 for(let i = 0; i < data.length; i++){
-  let farm = data[i];
-
-
-}
+    let farm = data[i];
+    if(farm.borough == "QUEENS"){
+      q++;
+    }else if(farm.borough == "MANHATTAN"){
+      m++;
+    }else if(farm.borough == "BROOKLYN"){
+      bk++;
+    }else if(farm.borough == "BRONX"){
+      bx++;
+    }else if(farm.borough == "STATEN ISLAND"){
+      s++;
+    }
   }
 
+  let chartData = [
+    ["QUEENS",q],
+    ["MANHATTAN",m],
+    ["BROOKLYN", bk],
+    ["BRONX", bx],
+    ["STATEN ISLAND", s]
+];
 
-function displayChart( data, chart_id, chart_type ){
-  c3.generate({
-    bindto: `#${chart_id}`, 
-    data: {
-      columns: data, 
-      type: chart_type 
-    }
-  });
+let chartType = get("chartType").value;
+
+displayChart(chartData,"chart",chartType)
 }
+
+

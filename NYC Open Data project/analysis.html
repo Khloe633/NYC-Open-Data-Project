@@ -6,15 +6,19 @@
     <title>TEST</title>
     <!-- Import libraries and link files  -->
     <link href="style.css" rel="stylesheet" type="text/css"/>
-    <script src="script.js"></script>
-   </head>
+    <link href="c3.css" rel="stylesheet" type="text/css"/>
+        <script src="c3.js"></script>
+        <script src="d3.js"></script>
+        <script src="helper.js"></script>  
+        <script src="script.js"></script>
+      </head>
   
-  <body style="background-image: url(https://i.ibb.co/tLKF1D0/yello017.jpg)" onload="onot()">
+  <body style="background-image: url(https://i.ibb.co/tLKF1D0/yello017.jpg)" onload="onto()">
    
           <!--banner-->
-        <div class="container center" id="banner">
-        <img src="images/banner.png" id="bannerimg">
-        </div>
+    <div class="container center" id="banner">
+    <img src="images/banner.png" id="bannerimg">
+    </div>
           <!--links-->
     <nav id ="links" class ="container">
       <a href="index.html"><img src="images/home.png"></a>
@@ -34,17 +38,19 @@
 <div class="container center">
   <div id="panel">
 
+  <div class="card">
+    <h3>Select Chart Type</h3>
+      <select id="chartType" style="width:100px;">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+      </select>
+  </div> 
+    
    <div class="card">
-    <h2>Budget(1)</h2>
+    <h2>Budget</h2>
     <p><span class="highlight">Scenario:</span>Create a chart that analyzes average grades of Math, English, Science and Social Studies courses by period.</p>
-    <a class="button" id = "Line" onclick="ByAgency()"> Line</a>
-    <a class="button" id = "Bar" onclick="ByAgency()"> Bar </a>
-   </div>
-
-   <div class="card">
-    <h2>Budget(2)</h2>
-    <p><span class="highlight">Scenario:</span>Create a chart that analyzes average grades of Math, English, Science and Social Studies courses by period. </p>
-    <a class="button" id = "Chart" onclick="ByAgency()"> Pie chart</a>
+    <a class="button" onclick="accidentsByBorough()"> Show Chart </a>
    </div>
 
 </div>
@@ -52,8 +58,7 @@
 <!-- div for chart -->
   <div class="show">
     <div id="chart"></div> 
-   </div>
-
+  </div>
 </div>
 
 <!--Footer-->
@@ -61,7 +66,6 @@
       <p>Website created by Khloe Islam and Qinhan Wang ©2026
       <br><span class="container center">All data is provided by NYC Open Data</span>
       </p>
-    </div>  
-    
+ </div>  
  </body>
 </html>
