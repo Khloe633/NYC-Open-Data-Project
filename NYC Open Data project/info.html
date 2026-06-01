@@ -32,9 +32,9 @@
             <!--Filtering Panel -->
 
         <div class="container">
-      <div id="leftPanel">
+      
         <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
-        <div class="card white">
+        <div class="card">
           <h3>SEARCH by Opening Year</h3>
            <input type="text" id="year" placeholder="Enter Year of Opening">
           <hr></hr>
@@ -46,7 +46,7 @@
           <select id="days"></select>          
           <select id="hours"></select>
           <hr></hr>
-          <a class="button" onclick="filterByvehicle()"> Search </a>
+          <a class="button" onclick="filterbyoperatingdayandhour()"> Search </a>
         </div>
  <div class="card">
           <h3>SEARCH By Borough and EBT acceptance </h3>
@@ -54,7 +54,7 @@
           <select id="ebt"></select>
           </select>
           <hr></hr>
-          <a class="button" onclick="FactorCasualty()"> Search </a>
+          <a class="button" onclick="filterbyboroandebt()"> Search </a>
         </div>
 
       </div>
@@ -63,9 +63,9 @@
       <div class="card center" id="rightPanel">
         <h1>NYC Farmer Markets</h1>
         <hr>
-        <div id="output" class="container"></div>
-      </div>
-       <div id="map"></div>
+        <div id="output" class="container">
+        </div>
+        <div id="map" class="container"></div>      
     </div> 
       
     </div>
