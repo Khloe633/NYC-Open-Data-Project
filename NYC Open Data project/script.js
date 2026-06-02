@@ -5,7 +5,7 @@ async function init(){
   info = await fetch(link);
   data = await info.json();
 
-  let output = get("output");
+  let leftPanel = get("leftPanel");
   let build = "";
 
 
@@ -13,7 +13,7 @@ async function init(){
     let farm = data[i];
     build+= card(farm);
   }
-  output.innerHTML = build;
+  leftPanel.innerHTML = build;
 
 
 //dropdown filters
@@ -32,6 +32,7 @@ async function init(){
 
 //filter by year
 function filterbyyear(){
+  leftPanel = get("leftPanel");
   let year= get("year").value;
   let build ="";
 
@@ -41,10 +42,11 @@ function filterbyyear(){
       build+= card(farm);
     }
   }
-  output.innerHTML=build;
+  leftPanel.innerHTML=build;
 }
 
 function filterbyboroandebt(){
+  leftPanel = get("leftPanel");
   let boros= get("boro").value;
   let ebts= get("ebt").value;
   let build ="";
@@ -55,12 +57,13 @@ function filterbyboroandebt(){
       build+= card(farm);
     }
   }
-  output.innerHTML=build;
+  leftPanel.innerHTML=build;
 }
   
 
 //FIlter by Operating hours and days (use select)
 function filterbyoperatingdayandhour(){
+  leftPanel = get("leftPanel");
   let day= get("days").value;
   let hour= get("hours").value;
   let build ="";
@@ -71,7 +74,7 @@ function filterbyoperatingdayandhour(){
       build+= card(farm);
     }
   }
-  output.innerHTML=build;
+  leftPanel.innerHTML=build;
 }
 
 //showmap
@@ -81,7 +84,6 @@ function displayMap(){
   let lon = get("lon").value;
   showMap(lat,lon);
 }
-
 
 //Analysis.html of  function 
 
@@ -98,15 +100,15 @@ let q = 0, bk = 0, bx = 0, m = 0, s = 0;
 
 for(let i = 0; i < data.length; i++){
     let farm = data[i];
-    if(farm.borough == "QUEENS"){
+    if(farm.borough == "Queens"){
       q++;
-    }else if(farm.borough == "MANHATTAN"){
+    }else if(farm.borough == "Manhattan"){
       m++;
-    }else if(farm.borough == "BROOKLYN"){
+    }else if(farm.borough == "Brooklyn"){
       bk++;
-    }else if(farm.borough == "BRONX"){
+    }else if(farm.borough == "Bronx"){
       bx++;
-    }else if(farm.borough == "STATEN ISLAND"){
+    }else if(farm.borough == "Staten Island"){
       s++;
     }
   }
@@ -124,4 +126,10 @@ let chartType = get("chartType").value;
 displayChart(chartData,"chart",chartType)
 }
 
+//map
 
+function displayMap(){
+  let lat = get("lat").value;
+  let lon = get("lon").value;
+  showMap(lat,lon);
+}

@@ -38,9 +38,7 @@ return build;
 }
 
 //analysis
-function get(id){
-  return document.getElementById(id);
-}
+
 
 function displayChart( data, chart_id, chart_type ){
   let chart = c3.generate({
@@ -50,4 +48,25 @@ function displayChart( data, chart_id, chart_type ){
       type:chart_type
     }
   });
+}
+
+//map
+// get() returns the element using document.getElementById().
+function get(id){
+  return document.getElementById(id);
+}
+// showMap() displays the map for a location [lat, lon] in the right panel
+function showMap(lat,lon){
+  let location = [lat, lon];
+  if(!mapObj){
+      mapObj = L.map("map");
+  } 
+  let map = mapObj.setView(location, 14);
+
+  const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+  }).addTo(map);
+
+  let marker = L.marker(location).addTo(map);
 }
