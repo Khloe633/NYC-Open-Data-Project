@@ -20,7 +20,7 @@ function showMap(lat,lon){
 
 //card
 function card( info ){
-  let build = `<div class="card fitted center">
+  let build = `<div class="card fitted">
     <h2>${info.marketname}</h2>
               <hr>
               <p>Location: ${info.streetaddress}, ${info.borough}</p>
@@ -56,6 +56,8 @@ function get(id){
   return document.getElementById(id);
 }
 // showMap() displays the map for a location [lat, lon] in the right panel
+let mapObj;
+
 function showMap(lat,lon){
   let location = [lat, lon];
   if(!mapObj){

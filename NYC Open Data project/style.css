@@ -63,7 +63,7 @@ nav img:hover{
    flex:1;
    max-height:800px;
    max-width: 1200px;;
-   overflow-y:scroll;
+   overflow-y:auto;
  }
 .card{
   flex:1 ;
@@ -73,7 +73,7 @@ nav img:hover{
   border-radius: 20px;
   text-align:center;
   border-radius:2px;
-  background-color: rgba(187, 194, 99, 0.3);
+  background-color: rgba(217, 218, 209, 0.3);
 }
 
 .show{
@@ -83,8 +83,7 @@ nav img:hover{
   border:2px solid gray;
   text-align:center;
   border-radius:2px;
-  background-color: rgba(128, 134, 45, 0.3);
-  height: 315px;
+  background-color: rgba(144, 153, 21, 0.3);
 }
 
 .highlight{
@@ -96,14 +95,14 @@ nav img:hover{
 }
 .button{
   text-decoration:none;
-  background-color:blue;
+  background-color:rgb(117, 13, 13);
   color:white;
   border-radius:4px;
   padding:6px;
   box-shadow:2px 2px 2px black;
 }
 .button:hover{
-  background-color:cornflowerblue;
+  background-color:rgb(212, 112, 112);
 }
 .flex-1{
   flex:1;

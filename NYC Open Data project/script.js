@@ -1,8 +1,5 @@
-let data, info, leftPanel, mapObj;
-
 async function init(){
-  //Challenge 1: Provide the API link to the 311 data.
-  let link ="farm.json"; 
+  let link ="farm.json"; //https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=50";
   info = await fetch(link);
   data = await info.json();
   //console.log(data);
@@ -14,20 +11,22 @@ async function init(){
     let farm = data[i];
     build += card(farm);
   }
-//dropdown filters
-   let days = fillDropDown("daysoperation");
-  document.getElementById("days").innerHTML = days;
 
-  let hours = fillDropDown("hoursoperations");
-  document.getElementById("hours").innerHTML = hours;
-  
-  let boro = fillDropDown("borough");
+  //Display results
+  leftPanel.innerHTML = build;  
+
+   let boro = fillDropDown("borough");
   document.getElementById("boro").innerHTML = boro;
 
   let ebt = fillDropDown("accepts_ebt");
   document.getElementById("ebt").innerHTML = ebt;  
-}
 
+     let days = fillDropDown("daysoperation");
+  document.getElementById("days").innerHTML = days;
+
+  let hours = fillDropDown("hoursoperations");
+  document.getElementById("hours").innerHTML = hours;
+}
 
 //filter by year
 function filterbyyear(){
@@ -85,13 +84,6 @@ function displayMap(){
 }
 
 //Analysis.html of  function 
-
-async function init(){
-  let link = "farm.json";
-  info = await fetch(link);
-  data = await info.json();
-  console.log(data);
-}
 
 function accidentsByBorough(){
 //Create and initialize variables:
