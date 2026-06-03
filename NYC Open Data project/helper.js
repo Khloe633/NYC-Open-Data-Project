@@ -33,7 +33,7 @@ function card( info ){
               if(info.latitude  && info.longitude){
                   build += `<input type="button" value="Map" onclick="showMap(${info.latitude},${info.longitude})">`;
                   }
-     build +=    `</div>`;
+     build +=   `</div>`;
 return build;
 }
 

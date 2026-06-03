@@ -1,21 +1,19 @@
 let data, info, leftPanel, mapObj;
 
 async function init(){
-  let link = "farm.json";
+  //Challenge 1: Provide the API link to the 311 data.
+  let link ="farm.json"; 
   info = await fetch(link);
   data = await info.json();
-
-  let leftPanel = get("leftPanel");
+  //console.log(data);
+  leftPanel = get("leftPanel");
   let build = "";
 
-
- for(let i = 0; i< data.length; i+=1){
+  // generate cards
+  for(let i = 0; i < data.length; i+=1) {
     let farm = data[i];
-    build+= card(farm);
+    build += card(farm);
   }
-  leftPanel.innerHTML = build;
-
-
 //dropdown filters
    let days = fillDropDown("daysoperation");
   document.getElementById("days").innerHTML = days;
@@ -29,6 +27,7 @@ async function init(){
   let ebt = fillDropDown("accepts_ebt");
   document.getElementById("ebt").innerHTML = ebt;  
 }
+
 
 //filter by year
 function filterbyyear(){
@@ -57,7 +56,7 @@ function filterbyboroandebt(){
       build+= card(farm);
     }
   }
-  leftPanel.innerHTML=build;
+ leftPanel.innerHTML = build; 
 }
   
 
@@ -129,7 +128,7 @@ displayChart(chartData,"chart",chartType)
 //map
 
 function displayMap(){
-  let lat = get("lat").value;
-  let lon = get("lon").value;
+    let lat = parseFloat(get("lat").value);
+    let lon = parseFloat(get("lon").value);
   showMap(lat,lon);
 }
