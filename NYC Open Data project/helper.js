@@ -37,6 +37,7 @@ function card( info ){
 return build;
 }
 
+
 //analysis
 
 
@@ -49,6 +50,7 @@ function displayChart( data, chart_id, chart_type ){
     }
   });
 }
+
 
 //map
 // get() returns the element using document.getElementById().

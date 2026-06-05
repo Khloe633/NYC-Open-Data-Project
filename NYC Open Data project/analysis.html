@@ -41,42 +41,67 @@
     <div class="card">NYC open data is a free, public use website with public data from many sources and services in New York City. The data provided comes directly from the city government and is available to any and all users online who want to view a certain piece of information. You can view their website <a href="https://opendata.cityofnewyork.us/">here</a>.</div>
   </div>
 
+  <!--anay1-->
 <div class="container center">
   <div id="panel">
 
   <div class="card">
-    <h2>Select Chart Type</h2>
+    <h2>Search By Borough</h2>
+    <hr>
+    <p>This data looks at the percentage of locations opened in a specific borough</p>
       <select id="chartType" style="width:100px;">
         <option value="bar">Bar</option>
         <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
       </select>
+      <a class="button" onclick="accidentsByBorough()"> Show Chart </a>
   </div> 
-    
-   <div class="card">
+      <div class="card">
     <h2>Budget</h2>
     <p><span class="highlight">Scenario:</span>Create a chart that analyzes average grades of Math, English, Science and Social Studies courses by period.</p>
-    <a class="button" onclick="accidentsByBorough()"> Show Chart </a>
+    <a class="button" onclick="accidentsByborough()"> Show Chart </a>
    </div>
-
+ 
 </div>
 
 <!-- div for chart -->
   <div class="show">
-    <div id="chart" style ="height:300px"></div> 
+    <div id="chart" style ="height:315px"></div> 
   </div>
 </div>
 
-<!-- map -->
-  <div class="card" id = "enter">
-    <input style="flex:1;text-align:right;" type="text" id="lat" placeholder="Enter latitude" >
-    <input style="flex:1;text-align:right;" type="text" id="lon" placeholder="Enter longitude" >
-    &nbsp; <a class="button" onclick="displayMap()"> View </a>
-  </div>
+
+<!--anay2-->
+<div class="container center">
+  <div id="panel">
+
+  <div class="card">
+    <h2>Search By Year opened</h2>
+    <hr>
+    <p>This dataset looks at the percentage of farmer market locations opened between 2018 and 2025</p>
+      <select id="chartTypes" style="width:100px;">
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
+      </select>
+      <a class="button" onclick="accidentsByborough()"> Show Chart </a>
+  </div> 
+  
+    
+   <div class="card">
+    <h2>Budget</h2>
+    <p><span class="highlight">Scenario:</span>Create a chart that analyzes average grades of Math, English, Science and Social Studies courses by period.</p>
+    <a class="button" onclick="accidentsByborough()"> Show Chart </a>
+   </div>
+</div>
 
 <!-- div for chart -->
-  <div class="container">
-    <div id="map"></div>
+  <div class="show">
+    <div id="charts" style ="height:315px"></div> 
   </div>
+</div>
+
+<!--anay3-->
 
 <!--Footer-->
  <div id="footer" class="container center">

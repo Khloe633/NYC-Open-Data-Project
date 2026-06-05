@@ -6,6 +6,7 @@ html,body{
   display:flex;
   padding: 10px;
 }
+
 .container img{
   max-height: 100%;
   max-width:100%;
@@ -59,21 +60,20 @@ nav img:hover{
   right: 0;
   bottom:0px;
 }
- #leftPanel{
+  #leftPanel{
    flex:1;
-   max-height:800px;
-   max-width: 1200px;;
+   max-height:600px;
    overflow-y:auto;
  }
 .card{
   flex:1 ;
   margin:10px;
   padding:25px;
-  border:2px ridge rgb(94, 65, 65);
+  border:5px ridge rgb(85, 93, 77);
   border-radius: 20px;
   text-align:center;
   border-radius:2px;
-  background-color: rgba(217, 218, 209, 0.3);
+  background-color: rgba(156, 165, 88, 0.3);
 }
 
 .show{
@@ -127,6 +127,10 @@ nav img:hover{
 #maps{
   height:500px;
 }
+#cow{
+  background-image: url("https://khurramhashmi.org/move-to-California/images/Mt_Wilson_NE_clouds_IMG_4266_051211_152532.jpg");
+}
+
 
 #map{
   flex:1;

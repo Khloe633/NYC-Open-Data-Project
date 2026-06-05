@@ -15,6 +15,9 @@ async function init(){
   //Display results
   leftPanel.innerHTML = build;  
 
+   let years = fillDropDown("year");
+  document.getElementById("year").innerHTML = years;
+
    let boro = fillDropDown("borough");
   document.getElementById("boro").innerHTML = boro;
 
@@ -68,12 +71,14 @@ function filterbyoperatingdayandhour(){
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
-    if(farm.hoursoperations == hour && farm.daysoperation == day){
+    if(farm.hoursoperations == hour || farm.daysoperation == day){
       build+= card(farm);
     }
   }
   leftPanel.innerHTML=build;
 }
+
+
 
 //showmap
 function displayMap(){
@@ -83,7 +88,9 @@ function displayMap(){
   showMap(lat,lon);
 }
 
-//Analysis.html of  function 
+
+
+//Analysis.html of  function(1) 
 
 function accidentsByBorough(){
 //Create and initialize variables:
@@ -117,10 +124,44 @@ let chartType = get("chartType").value;
 displayChart(chartData,"chart",chartType)
 }
 
-//map
+//Analysis.html of  function(2) 
+function accidentsByborough(){
+//Create and initialize variables:
+let a = 0 ; b = 0 ; c = 0 ; d = 0 ; e = 0 ; f = 0 ; g = 0 ; h = 0;
 
-function displayMap(){
-    let lat = parseFloat(get("lat").value);
-    let lon = parseFloat(get("lon").value);
-  showMap(lat,lon);
+for(let i = 0; i < data.length; i++){
+    let farm = data[i];
+    if(farm.year == 2025){
+      a++;
+    }else if(farm.year == 2024){
+      b++;
+    }else if(farm.year == 2023){
+      c++;
+    }else if(farm.year == 2022){
+      d++;
+    }else if(farm.year == 2021){
+      e++;
+    }else if(farm.year == 2020){
+      f++;
+    }else if(farm.year == 2019){
+      g++;
+    }else if(farm.year == 2018){
+      h++;
+    }
+  }
+
+  let chartData = [
+    ["2025",a],
+    ["2024",b],
+    ["2023", c],
+    ["2022", d],
+    ["2021", e],
+    ["2020", f],
+    ["2019", g],
+    ["2018", h]
+];
+
+let chartTypes = get("chartTypes").value;
+
+displayChart(chartData,"charts",chartTypes)
 }
