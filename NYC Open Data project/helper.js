@@ -26,7 +26,7 @@ function card( info ){
               <p>Location: ${info.streetaddress}, ${info.borough}</p>
               <p>Year Opened: ${info.year}</p>
               <p>Community District: ${info.community_district}</p>
-              <p>Operating hours:${info.daysoperation}, ${info.hoursoperations}</p>
+              <p>Operating hours: ${info.daysoperation}, ${info.hoursoperations}</p>
               <p>Open year round?:${info.open_year_round}</p>
               <p>Accepts EBT?: ${info.accepts_ebt}</p>`;
              
