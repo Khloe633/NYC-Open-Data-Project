@@ -7,9 +7,10 @@
     <!-- Import libraries and link files  -->
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <script src="script.js"></script>
+    <script src="helper.js"></script>
    </head>
   
-  <body style="background-image: url(https://i.ibb.co/tLKF1D0/yello017.jpg)">
+  <body style="background-image: url(https://i.ibb.co/tLKF1D0/yello017.jpg)" onload="init()">
    
           <!--banner-->
         <div class="container center" id="banner">
@@ -24,13 +25,10 @@
 
           <!--Content-->
   <div id="cow">
-      <div class="container center">
-             <h1 class="heading">ABOUT NYC OPEN DATA</h1>
-          </div>
-
-      <div class="center container">
-        <div class="card home"><p>NYC open data is a free, public use website with public data from many sources and services in New York City. The data provided comes directly from the city government and is available to any and all users online who want to view a certain piece of information. You can view their website <a href="https://opendata.cityofnewyork.us/">here.</a></p></div>
-      </div>
+    <div class="container center">
+      <h1 style="color:rgb(24, 22, 22);">Welcome to the farmers market data website!</h1>
+    </div>
+      
 
    <div class="container center">
              <h1 class="heading">OUR GOAL</h1>
@@ -39,6 +37,14 @@
       <div class="center container">
         <div class="card home"><p>For this website in particular, users can get access to and learn about Farmer Markets in NYC and their location, year opened, operating hours, and if or if not they accept EBT. Users are able to filter this data based on their preferences and can also access analytics relating to the data.</p></div>
       </div>   
+<div class="container center">
+             <h1 class="heading">ABOUT NYC OPEN DATA</h1>
+          </div>
+
+      <div class="center container">
+        <div class="card home"><p>NYC open data is a free, public use website with public data from many sources and services in New York City. The data provided comes directly from the city government and is available to any and all users online who want to view a certain piece of information. You can view their website <a href="https://opendata.cityofnewyork.us/">here.</a></p></div>
+      </div>
+
       <div class="container center">
   <h1 class="heading">EXPLORE</h1>
 </div>
@@ -46,18 +52,24 @@
 <div class="container center">
   <div class="card home">
     <h1>DATA INFO</h1>
-    <img src="https://www.salon.com/app/uploads/2021/08/farmers-market-produce-0812211-1024x691.jpg">
+    <img src="images/explore1.jpg" class="fitted">
     <br>
     <a href="info.html" class="button">Browse</a>
   </div>
  
   <div class="card home">
     <h1>ANALYTICS</h1>
-    <img src="https://www.salon.com/app/uploads/2021/08/farmers-market-produce-0812211-1024x691.jpg">
+    <img src="images/explore2.jpg" class="fitted" id="modal_output">
     <br>
-    <a href="analysis.html" class="button">Browse</a>
+      <a href="analysis.html" class="button">Browse</a>    
   </div>
 </div>
+<div class="container">
+  <img src="images/cow.webp" onclick="alert('Moo!')" id="cowimage">
+<div class="card"id="hometext">
+  <h1>Click on the cow for a cool message!</h1>
+</div>
+  </div>
   </div>
        
 
