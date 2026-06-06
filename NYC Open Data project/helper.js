@@ -20,7 +20,7 @@ function showMap(lat,lon){
 
 //card
 function card( info ){
-  let build = `<div class="card fitted">
+  let build = `<div class="cardfitted">
     <h2>${info.marketname}</h2>
               <hr>
               <p>Location: ${info.streetaddress}, ${info.borough}</p>

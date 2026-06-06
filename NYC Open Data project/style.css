@@ -1,6 +1,7 @@
 html,body{
   margin:0 auto;
   font-family:'Franklin Gothic Medium', Arial, sans-serif;
+  color:rgb(35, 30, 30);
 }
 
 .container{
@@ -10,7 +11,7 @@ html,body{
 
 .container img{
   max-height: 100%;
-  max-width:100%;
+  max-width:75%;
   object-fit: cover;
 }
 
@@ -21,17 +22,20 @@ html,body{
 
 
 .container #bannerimg{
-  height:70%;
-  width:65%;
+  height:40%;
+  width:100%;
 }
 
 .heading{
   color:rgb(229, 243, 222);
-  font-size: 32pt;
+  font-size: 38pt;
   text-decoration-line: underline;
-  text-shadow: black 2px 2px;
+  text-shadow: black 2px 4px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight:bold;
+}
+.heading:hover{
+  font-size:40pt;
+  transition: 0.2s;
 }
 
 nav{
@@ -72,12 +76,6 @@ nav img:hover{
   right: 0;
   bottom:0px;
 }
-  #leftPanel{
-   flex:1;
-   max-height:600px;
-   overflow-y:auto;
-   margin:10px;
- }
 
 .card{
   flex:1 ;
@@ -86,9 +84,8 @@ nav img:hover{
   border:5px ridge rgb(85, 93, 77);
   border-radius: 2px;
   text-align: center;
-  background-color: rgba(156, 165, 88, 0.6);
+  background-color: rgba(188, 200, 96, 0.6);
 }
-
 
 .cards{
   flex:1 ;
@@ -115,7 +112,9 @@ nav img:hover{
   font-style:italic;
   color:blue;
 }
-
+.heading{
+  font-weight:bold;
+}
 .button{
   text-decoration:none;
   background-color:rgb(117, 13, 13);
@@ -127,6 +126,7 @@ nav img:hover{
 .button:hover{
   background-color:rgb(212, 112, 112);
 }
+
 .flex-1{
   flex:1;
 }
@@ -138,9 +138,16 @@ nav img:hover{
   height:100%;
   object-fit: cover;
 }
-#output{
-  display:flex;
-  flex-wrap:wrap;
+.home{
+  background-color: rgba(217, 221, 140,0.9);
+}
+.home:hover{
+background-color: rgba(80, 82, 39, 0.9);
+  color:rgb(43, 39, 39);
+  font-weight: bold;
+  color:aliceblue;
+  text-decoration: solid;
+transition:0.5s;
 }
 
 #panel{
@@ -155,9 +162,9 @@ nav img:hover{
   opacity:0.9;
   background-size: cover;
   flex:1;  
-  margin:40px;
+  margin:30px;
   padding:25px;
-  border:5px ridge rgb(85, 93, 77);
+  border:5px ridge rgb(138, 156, 120);
   border-radius: 20px;
   box-shadow:black 2px 5px;
 }
@@ -165,21 +172,58 @@ nav img:hover{
 #cow div{
   max-width:  80%;
   max-width: 80%;
-
-}
-
-
-#map{
-  flex:1;
-  width:90%;
-  height:400px;
-  border-radius:10px;
-  box-shadow:2px 2px 2px black;
-  background-color: rgb(180, 177, 177);
+  position:relative;
+  left:50px;
 }
 
 #enter{
   display:flex;
   padding:10px;
   flex-wrap:wrap;
+}
+
+#output{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#leftPanel{
+  width: 50%;
+  height: 630px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px;
+}
+
+.cardfitted{
+  max-width: 300px;
+  height: 450px;          
+  padding: 25px;
+  border: 5px ridge rgb(85, 93, 77);
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgba(156, 165, 88, 0.6);
+  box-sizing: border-box;
+  flex:300px;
+  overflow: auto;      
+}
+
+#map{
+  width: 50%;
+  height: 630px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+  background-color: rgb(180, 177, 177);
+  box-sizing: border-box;
 }
