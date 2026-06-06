@@ -1,7 +1,8 @@
 html,body{
   margin:0 auto;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Franklin Gothic Medium', Arial, sans-serif;
 }
+
 .container{
   display:flex;
   padding: 10px;
@@ -18,10 +19,21 @@ html,body{
   align-items:center;
 }
 
+
 .container #bannerimg{
   height:70%;
   width:65%;
 }
+
+.heading{
+  color:rgb(229, 243, 222);
+  font-size: 32pt;
+  text-decoration-line: underline;
+  text-shadow: black 2px 2px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight:bold;
+}
+
 nav{
   background-color:rgb(84, 90, 27);
   max-height: 90px;
@@ -72,11 +84,11 @@ nav img:hover{
   margin:10px;
   padding:25px;
   border:5px ridge rgb(85, 93, 77);
-  border-radius: 20px;
-  text-align:center;
-  border-radius:2px;
-  background-color: rgba(156, 165, 88, 0.3);
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgba(156, 165, 88, 0.6);
 }
+
 
 .cards{
   flex:1 ;
@@ -84,10 +96,9 @@ nav img:hover{
   margin:10px;
   padding:25px;
   border:5px ridge rgb(85, 93, 77);
-  border-radius: 20px;
-  text-align:center;
-  border-radius:2px;
-  background-color: rgba(156, 165, 88, 0.3);
+  border-radius: 2px;
+  text-align: center;
+  background-color: rgba(156, 165, 88, 0.6);
 }
 
 .show{
@@ -104,9 +115,7 @@ nav img:hover{
   font-style:italic;
   color:blue;
 }
-.heading{
-  font-weight:bold;
-}
+
 .button{
   text-decoration:none;
   background-color:rgb(117, 13, 13);
@@ -142,7 +151,21 @@ nav img:hover{
   height:500px;
 }
 #cow{
-  background-image: url("https://khurramhashmi.org/move-to-California/images/Mt_Wilson_NE_clouds_IMG_4266_051211_152532.jpg");
+  background-image: url("https://i.pinimg.com/736x/e1/5c/39/e15c39e26affb6311c02b7cd4a5357c8.jpg");
+  opacity:0.9;
+  background-size: cover;
+  flex:1;  
+  margin:40px;
+  padding:25px;
+  border:5px ridge rgb(85, 93, 77);
+  border-radius: 20px;
+  box-shadow:black 2px 5px;
+}
+
+#cow div{
+  max-width:  80%;
+  max-width: 80%;
+
 }
 
 
