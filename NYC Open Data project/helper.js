@@ -18,6 +18,68 @@ function showMap(lat,lon){
   let marker = L.marker(location).addTo(map);// places marker on map
 }
 
+
+let $ = (selector) => document.querySelector(selector);
+//Concept Source - https://www.w3schools.com/howto/howto_css_modals.asp
+
+// Modal
+/*function createModal(text, content, container) {
+  const button = document.createElement("div");
+  button.innerHTML = text;
+
+  const modal = document.createElement("div");
+  modal.setAttribute("class", "modal");
+
+  const modal_content = document.createElement("div");
+  modal_content.setAttribute("class", "modal-content");
+
+  const modal_header = document.createElement("div");
+  modal_header.setAttribute("class", "modal-header");
+
+  const modal_body = document.createElement("div");
+  modal_body.setAttribute("class", "modal-body");
+
+  // FIX: Check the local variable 'content', not 'this.content'
+  if (typeof content === "object" && content !== null) {
+    modal_body.append(content);
+  } else {
+    modal_body.innerHTML = content;
+  }
+  
+  const closeButton = document.createElement("span");
+  closeButton.setAttribute("class", "close");
+  closeButton.innerHTML = "&times;"; // FIX: Added missing semicolon
+
+  // Event Listeners
+  button.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // DOM Assembly
+  modal_header.append(closeButton);
+  modal_content.append(modal_header);
+  modal_content.append(modal_body);
+  modal.append(modal_content);
+
+  $(`#${container}`).append(button);
+  $(`#${container}`).append(modal);
+
+  // Return control methods like your other components
+  return {
+    open: () => modal.style.display = "block",
+    close: () => modal.style.display = "none",
+    element: modal
+  };
+}
+*/
+
+
+
+
 //card
 function card( info ){
   let build = `<div class="cardfitted">

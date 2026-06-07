@@ -53,9 +53,9 @@ nav a:hover{
 }
 
 nav img{
-  padding:10px;
-  flex:1;
-  height:55px;
+  height:50px;;
+  max-width:75%;
+  object-fit: cover;
 }
 
 nav img:hover{
@@ -122,6 +122,7 @@ nav img:hover{
   color:white;
   border-radius:4px;
   padding:6px;
+  width:200px;
   box-shadow:2px 2px 2px black;
 }
 .button:hover{
@@ -134,6 +135,14 @@ nav img:hover{
 .fitted{
 max-width:200px;
 max-height:200px;
+}
+
+.fitted img{
+object-fit:cover;
+}
+.fitted div{
+  max-width:  80%;
+height:auto;
 }
 
 .card img{
@@ -219,7 +228,7 @@ transition:0.5s;
   text-align: center;
   background-color: rgba(156, 165, 88, 0.6);
   box-sizing: border-box;
-  flex:300px;
+  flex:200px;
   overflow: auto;      
 }
 
@@ -242,6 +251,14 @@ transition:0.5s;
 
 #hometext{
   border:solid 2px rgb(71, 55, 55);
-  max-height:200px;
+  max-height:100px;
+  font-size:10px;
   background-color: rgb(217, 221, 140);
+position:relative;
+top:50px;
+}
+
+#s img{
+  object-fit:contain;
+ 
 }

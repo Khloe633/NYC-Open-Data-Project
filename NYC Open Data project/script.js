@@ -78,7 +78,10 @@ function filterbyoperatingdayandhour(){
   leftPanel.innerHTML=build;
 }
 
-
+//modal function
+/*function initialize(){
+  createModal("<img src='images/cow.webp'>", "<img src='images/cow2.webp'>", "modal_output");
+}*/
 
 //showmap
 function displayMap(){
