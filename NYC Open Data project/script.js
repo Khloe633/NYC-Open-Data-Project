@@ -35,29 +35,37 @@ async function init(){
 function filterbyyear(){
   leftPanel = get("leftPanel");
   let year= get("year").value;
+  let result = document.getElementById("result");
   let build ="";
+  let ct=0;
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
     if(farm.year == year){
       build+= card(farm);
+      ct+=1;
     }
   }
+  result.innerHTML = `${ct} Results found.`
   leftPanel.innerHTML=build;
 }
 
 function filterbyboroandebt(){
   leftPanel = get("leftPanel");
+  let result = document.getElementById("result");
   let boros= get("boro").value;
   let ebts= get("ebt").value;
   let build ="";
+  let ct=0;
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
     if(farm.borough == boros && farm.accepts_ebt == ebts){
       build+= card(farm);
+      ct+=1;
     }
   }
+  result.innerHTML = `${ct} Results found.`
  leftPanel.innerHTML = build; 
 }
   
@@ -67,14 +75,18 @@ function filterbyoperatingdayandhour(){
   leftPanel = get("leftPanel");
   let day= get("days").value;
   let hour= get("hours").value;
+  let result = document.getElementById("result");
   let build ="";
+  let ct=0;
 
    for(let i=0; i<data.length; i++){
     let farm=data[i];
     if(farm.hoursoperations == hour || farm.daysoperation == day){
       build+= card(farm);
+      ct+=1;
     }
   }
+  result.innerHTML = `${ct} Results found.`;
   leftPanel.innerHTML=build;
 }
 
