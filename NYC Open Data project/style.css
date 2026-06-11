@@ -153,7 +153,7 @@ object-fit:cover;
 
 .fitted div{
   max-width:  80%;
-height:auto;
+  height:auto;
 }
 
 .card img{
@@ -169,12 +169,12 @@ height:auto;
 }
 
 .home:hover{
-background-color: rgba(80, 82, 39, 0.9);
+  background-color: rgba(80, 82, 39, 0.9);
   color:rgb(43, 39, 39);
   font-weight: bold;
   color:aliceblue;
   text-decoration: solid;
-transition:0.5s;
+  transition:0.5s;
 }
 
 #panel{
@@ -259,8 +259,11 @@ transition:0.5s;
 
 
 #cowimage:hover{
-  filter: drop-shadow(3px 0px 0px yellow) ;
-          transition:0.5s;
+  filter: drop-shadow(10px 4px 0px yellow) ;
+  filter:drop-shadow(10px -4px 0px yellow) ;
+  filter: drop-shadow(10px 4px 0px yellow) ;
+    filter:drop-shadow(10px -4px 0px yellow) ;
+  transition:0.5s;
 }
 
 #hometext{
@@ -277,8 +280,8 @@ transition:0.5s;
 }
 
 #result{
-  border:solid 2px rgb(71, 55, 55);
+ border:solid 2px rgb(71, 55, 55);
  background-color: #fff700;
-max-width: 200px;
-  font-size: 20px;
+ max-width: 200px;
+ font-size: 20px;
 }
