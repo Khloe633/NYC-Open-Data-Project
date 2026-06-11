@@ -30,7 +30,7 @@ html,body{
   color:rgb(229, 243, 222);
   font-size: 38pt;
   text-decoration-line: underline;
-  text-shadow: black 2px 4px;
+  text-shadow: black 2px 4px 2px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -186,7 +186,7 @@ object-fit:cover;
 }
 
 #cow{
-  background-image: url("https://i.pinimg.com/736x/e1/5c/39/e15c39e26affb6311c02b7cd4a5357c8.jpg");
+  background-image: url("images/cowbg.jpg");
   opacity:0.9;
   background-size: cover;
   flex:1;  
